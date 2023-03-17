@@ -1,20 +1,32 @@
 @use '../abstracts/' as abs;
 
 .burger {
-    width: abs.toRem(30);
+    width: abs.toRem(40);
+    padding: .35em;
     aspect-ratio: 1;
-    position: relative;
-    @include abs.flex-center;
     background-color: transparent;
+    opacity: .8;
+    // @include flex-col-center;
+    transition: opacity 300ms linear;
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+
+    &:focus {
+        border: 1px solid abs.$clr-white;
+    }
 
     &__line {
+        display: block;
         width: 100%;
         height: abs.$burger-line-height;
-        display: block;
         background-color: abs.$burger-bg;
+        border-radius: 2em;
 
         &:not(:last-child) {
-            margin-block-end: .5em;
+            margin-block-end: .3em;
         }
     }
 }

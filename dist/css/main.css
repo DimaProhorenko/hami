@@ -52,6 +52,7 @@ button {
   outline: none;
   border: none;
   display: inline-block;
+  cursor: pointer;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -80,33 +81,66 @@ button {
 }
 
 .burger {
-  width: 1.875rem;
+  width: 2.5rem;
+  padding: 0.35em;
   aspect-ratio: 1;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: transparent;
+  opacity: 0.8;
+  transition: opacity 300ms linear;
+}
+.burger:hover, .burger:focus {
+  opacity: 1;
+}
+.burger:focus {
+  border: 1px solid hsl(0, 0%, 100%);
 }
 .burger__line {
-  width: 100%;
-  height: 2px;
   display: block;
+  width: 100%;
+  height: 0.25rem;
   background-color: hsl(0, 0%, 100%);
+  border-radius: 2em;
 }
 .burger__line:not(:last-child) {
-  margin-block-end: 0.5em;
+  margin-block-end: 0.3em;
 }
 
 .header {
   padding-block: 2em;
+  position: relative;
 }
 .header__container {
   display: flex;
   justify-content: space-between;
 }
 .header__nav {
-  display: none;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.header__nav.active {
+  opacity: 1;
+  translate: 0;
+}
+.header__nav::after {
+  content: "";
+  width: 110%;
+  height: 100vh;
+  background-color: hsl(217, 78%, 49%);
+  position: absolute;
+  top: 0;
+  left: -40vw;
+  transform: skew(-14deg) translateX(-50vh);
+  opacity: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
