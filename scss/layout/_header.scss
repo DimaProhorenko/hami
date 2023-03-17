@@ -1,0 +1,11 @@
+@use '../abstracts' as abs;
+
+.header {
+    padding-block: 2em;
+    &__container {
+        @include abs.flex-jc-sb;
+    }
+    &__nav {
+        display: none;
+    }
+}

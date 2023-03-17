@@ -1,0 +1,20 @@
+@use '../abstracts/' as abs;
+
+.burger {
+    width: abs.toRem(30);
+    aspect-ratio: 1;
+    position: relative;
+    @include abs.flex-center;
+    background-color: transparent;
+
+    &__line {
+        width: 100%;
+        height: abs.$burger-line-height;
+        display: block;
+        background-color: abs.$burger-bg;
+
+        &:not(:last-child) {
+            margin-block-end: .5em;
+        }
+    }
+}

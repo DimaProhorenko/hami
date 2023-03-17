@@ -1,0 +1,14 @@
+@use '../abstracts/' as abs;
+
+.wrapper {
+    width: 90%;
+    max-width: abs.$max-width;
+    margin-inline: auto;
+    padding: .25em;
+}
+
+// bgs
+.bg-primary {
+    background-color: abs.$clr-primary;
+}
+
