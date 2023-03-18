@@ -1,7 +1,8 @@
 const burgerBtn = document.querySelector('.burger');
-const navEl = document.querySelector('.nav');
+const navEl = document.querySelector('.header__nav');
+console.log(burgerBtn);
 
 burgerBtn.addEventListener('click', e => {
-    burgerBtn.classList.toggle('active');
-    navEl.classList.toggle('active');
+    burgerBtn.classList.toggle('burger--active');
+    navEl.classList.toggle('header__nav--active');
 })

@@ -87,6 +87,8 @@ button {
   background-color: transparent;
   opacity: 0.8;
   transition: opacity 300ms linear;
+  position: relative;
+  z-index: 1000;
 }
 .burger:hover, .burger:focus {
   opacity: 1;
@@ -104,7 +106,6 @@ button {
 .burger__line:not(:last-child) {
   margin-block-end: 0.3em;
 }
-
 .header {
   padding-block: 2em;
   position: relative;
@@ -119,7 +120,7 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: hsl(0, 0%, 100%);
+  background-color: transparent;
   color: hsl(0, 0%, 100%);
   display: flex;
   flex-direction: column;
@@ -127,20 +128,68 @@ button {
   justify-content: center;
   overflow: hidden;
 }
-.header__nav.active {
-  opacity: 1;
-  translate: 0;
-}
 .header__nav::after {
   content: "";
-  width: 110%;
-  height: 100vh;
-  background-color: hsl(217, 78%, 49%);
   position: absolute;
   top: 0;
-  left: -40vw;
-  transform: skew(-14deg) translateX(-50vh);
+  left: -30vw;
+  width: 110%;
+  height: 100%;
+  background-color: hsl(217, 78%, 49%);
+  transform: skew(-14deg) translate(-120%);
   opacity: 0;
+  transition: opacity 300ms ease-in-out 100ms, transform 300ms ease-in-out;
+  z-index: -1;
+}
+.header__nav--active::after {
+  opacity: 1;
+  transform: skew(-14deg) translateX(0);
+}
+.header__nav--active .header__list {
+  opacity: 1;
+  transform: skew(-14deg) translateX(0);
+}
+.header__nav--active .header__list-item {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 200ms linear, transform 200ms ease-in-out;
+}
+.header__nav--active .header__list-item:first-child {
+  transition-delay: 150ms;
+}
+.header__nav--active .header__list-item:nth-child(2) {
+  transition-delay: 250ms;
+}
+.header__nav--active .header__list-item:nth-child(3) {
+  transition-delay: 350ms;
+}
+.header__nav--active .header__list-item:nth-child(4) {
+  transition-delay: 450ms;
+}
+.header__list {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1em;
+  text-align: right;
+  z-index: 3;
+  position: relative;
+  transform: skew(-14deg) translateX(-3.125rem);
+  opacity: 0;
+}
+.header__list-item {
+  opacity: 0;
+  transform: translateY(-1rem);
+  transition: opacity 300ms linear;
+}
+.header__link {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=main.css.map */

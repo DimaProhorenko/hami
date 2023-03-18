@@ -8,6 +8,8 @@
     opacity: .8;
     // @include flex-col-center;
     transition: opacity 300ms linear;
+    position: relative;
+    z-index: 1000;
 
     &:hover,
     &:focus {
@@ -28,5 +30,9 @@
         &:not(:last-child) {
             margin-block-end: .3em;
         }
+    }
+
+    &.active {
+
     }
 }

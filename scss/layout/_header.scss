@@ -11,25 +11,87 @@
         width: 100%;
         height: 100vh;
         @include abs.absolute;
-        background-color: abs.$clr-white;
+        background-color: transparent;
+        // background-color: abs.$clr-white;
         color: abs.$clr-white;
         @include abs.flex-col-center;
         overflow: hidden;
 
-        &.active {
-            opacity: 1;
-            translate: 0;
-        }
-
         &::after {
             content: '';
+            position: absolute;
+            top: 0;
+            left: -30vw;
             width: 110%;
-            height: 100vh;
+            height: 100%;
             background-color: abs.$clr-primary;
-            @include abs.absolute(0, -40vw);
-            transform: skew(-14deg) translateX(-50vh);
+            transform: skew(-14deg) translate(-120%);
             opacity: 0;
-
+            transition: opacity 300ms ease-in-out 100ms, transform 300ms ease-in-out;
+            z-index: -1;
         }
+
+        &--active {
+
+            &::after {
+                opacity: 1;
+                transform: skew(-14deg) translateX(0);
+            }
+
+            .header__list {
+                opacity: 1;
+                transform: skew(-14deg) translateX(0);
+
+                &-item {
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition: opacity 200ms linear, transform 200ms ease-in-out;
+
+                    &:first-child {
+                        transition-delay: 150ms;
+                    }
+                    &:nth-child(2) {
+                        transition-delay: 250ms;
+                    }
+                    &:nth-child(3) {
+                        transition-delay: 350ms;
+                    }
+                    &:nth-child(4) {
+                        transition-delay: 450ms;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    &__list {
+        width: fit-content;
+        height: fit-content;
+        // padding: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 1em;
+        text-align: right;
+        z-index: 3;
+        position: relative;
+        transform: skew(-14deg) translateX(- abs.toRem(50));
+        opacity: 0;
+
+        &-item {
+            opacity: 0;
+            transform: translateY(-1rem);
+            transition: opacity 300ms linear;
+        }
+    }
+
+    &__link {
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: abs.$clr-white;
+        text-decoration: none;
+        
     }
 }
