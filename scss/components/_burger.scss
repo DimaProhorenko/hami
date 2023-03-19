@@ -10,6 +10,10 @@
     transition: opacity 300ms linear;
     position: relative;
     z-index: 1000;
+    
+    @include abs.for-tablet-up {
+        display: none;
+    }
 
     &:hover,
     &:focus {
@@ -26,13 +30,25 @@
         height: abs.$burger-line-height;
         background-color: abs.$burger-bg;
         border-radius: 2em;
+        transition: transform 300ms ease-in-out;
 
         &:not(:last-child) {
             margin-block-end: .3em;
         }
     }
 
-    &.active {
-
+    &--active {
+        .burger__line {
+            &--top {
+                transform: translateY(calc(abs.$burger-line-height + .3em)) rotate(45deg);
+            }
+            &--mid {
+                opacity: 0;
+                transition: opacity 150ms linear;
+            }
+            &--bot {
+                transform: translateY(calc((abs.$burger-line-height + .3em) * -1)) rotate(-45deg);
+            }
+        }
     }
 }

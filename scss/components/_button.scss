@@ -1,0 +1,14 @@
+@use '../abstracts' as abs;
+
+%btn {
+    outline: none;
+    border: none;
+    background-color: abs.$clr-white;
+    color: abs.$clr-primary;
+    padding: .5em 1em;
+}
+
+
+.btn {
+    @extend %btn;
+}

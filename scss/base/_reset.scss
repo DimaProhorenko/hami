@@ -30,6 +30,14 @@ body {
   background-color: abs.$body-bg;
 }
 
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1;
+}
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -71,4 +79,10 @@ button {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+:where([aria-current=page]) {
+  font-weight: 600;
+  border-bottom: 2px solid abs.$clr-white;
+  padding-block-end: .5em;
 }

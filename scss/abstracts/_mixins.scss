@@ -1,5 +1,14 @@
+@use './vars';
+
 @mixin flex() {
     display: flex;
+}
+
+@mixin flex-vals($jc: space-between, $ai: center, $dir: column) {
+    @include flex;
+    flex-direction: $dir;
+    justify-content: $jc;
+    align-items: $ai;
 }
 
 @mixin flex-center() {
@@ -29,4 +38,14 @@
 @mixin absolute-center() {
     @include absolute(50%, 50%);
     translate: -50% -50%;
+}
+
+
+
+@mixin for-tablet-up() {
+    @media screen and (min-width: vars.$bp-tablet) { @content; }
+}
+
+@mixin for-desktop-up() {
+    @media screen and (min-width: vars.$bp-desktop) { @content; }
 }

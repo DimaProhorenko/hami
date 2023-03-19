@@ -7,8 +7,19 @@
     padding: .25em;
 }
 
+.flow > *:where(:not(:first-child)) {
+    margin-top: 1em;
+}
+
 // bgs
 .bg-primary {
     background-color: abs.$clr-primary;
+    color: abs.$clr-white;
 }
 
+
+.title {
+    font-size: 2.625rem;
+    font-size: clamp(2.625rem, 1.308206106870229rem + 6.106870229007633vw, 5.125rem);
+    margin-block-end: .5em;
+}

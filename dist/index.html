@@ -34,7 +34,7 @@
         <nav class="header__nav">
           <ul class="header__list" role="list">
             <li class="header__list-item">
-              <a href="/" class="header__link">Home</a>
+              <a href="/" aria-current="page" class="header__link">Home</a>
             </li>
             <li class="header__list-item">
               <a href="./hosting.html" class="header__link">Hosting</a>
@@ -49,6 +49,28 @@
         </nav>
       </div>
     </header>
+
+    <section class="section hero bg-primary">
+      <div class="wrapper hero__container">
+        <div class="hero__info flow">
+          <h1 class="title">The best web hosting</h1>
+          <h2 class="title--lead">
+            Starting at <span class="crossed">$7.99</span> $2.95/month
+          </h2>
+          <p class="lead">
+            Everything you will EVER need to Host and Manage your Website
+          </p>
+          <a href="./contact.html" class="btn">Start now</a>
+        </div>
+        <div class="hero__right">
+          <img
+            src="./assets/images/header/stack.webp"
+            alt="tech"
+            class="hero__img"
+          />
+        </div>
+      </div>
+    </section>
 
     <script src="./app.js"></script>
   </body>
