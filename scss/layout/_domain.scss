@@ -2,8 +2,19 @@
 
 .domain {
 
+    &__info { 
+        @include abs.for-desktop-up {
+            max-width: abs.toRem(400);
+        }
+    }
+
     &__form {
         margin-block-start: 6em;
+
+        @include abs.for-tablet-up {
+            margin-block-start: 0;
+            width: 100%;
+        }
     }
 
     &__group {
@@ -12,6 +23,11 @@
         width: fit-content;
         max-width: 100%;
         overflow: hidden;
+        display: flex;
+
+        @include abs.for-tablet-up {
+            width: 100%;
+        }
     }
 
     &__input {
@@ -23,7 +39,13 @@
     &__select {
         border-color: transparent;
         border-radius: 0;
-        width: abs.toRem(130);
+        width: abs.toRem(80);
+        font-size: abs.toRem(14);
+        appearance: none;
+
+        @include abs.for-desktop-up {
+            width: abs.toRem(120);
+        }
     }
 
     &__submit {
@@ -33,5 +55,10 @@
         width: 30%;
         overflow-wrap: break-word;
         white-space: normal;
+        font-weight: 400;
+
+        @include abs.for-desktop-up {
+            min-width: abs.toRem(160);
+        }
     }
 }

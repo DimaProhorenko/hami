@@ -1,5 +1,11 @@
 @use './vars';
 
+
+@mixin transition($prop, $duration: 300ms, $timing: linear) {
+    transtion: $prop $duration $timing;
+}
+
+
 @mixin flex() {
     display: flex;
 }

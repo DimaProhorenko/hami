@@ -62,6 +62,19 @@
 }
 
 
+.flex {
+    @include abs.flex-col;
+
+    @include abs.for-tablet-up {
+        flex-direction: row;
+        align-items: flex-start;
+
+        & > * {
+            flex: 1;
+        }
+    }
+}
+
 .flex-halfs {
     @include abs.flex-col;
     align-items: center;
