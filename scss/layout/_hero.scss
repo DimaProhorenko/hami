@@ -1,6 +1,59 @@
 @use '../abstracts/' as abs;
 
 .hero {
-    min-height: 100vh;
-    padding-top: 5rem;
+    // min-height: 100vh;
+    padding-block-start: 5rem;
+
+    &__container {
+        position: relative;
+        margin-block-end: 3em;
+
+        @include abs.for-tablet-up {
+            margin-block-end: 5em;
+        }
+
+    }
+
+    &__image {
+        position: relative;
+        @include abs.for-tablet-up {
+            min-width: abs.toRem(300);
+        }
+    }
+
+    &__info {
+        position: relative;
+        z-index: 3;
+
+        @include abs.for-tablet-up {
+            max-width: abs.toRem(400);
+        }
+
+        @include abs.for-desktop-up {
+            max-width: abs.toRem(600);
+        }
+    }
+
+    &__img {
+        @include abs.for-tablet-up {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            translate: 0 -50%;
+            max-width: abs.toRem(400);
+        }
+
+        @include abs.for-desktop-up {
+            max-width: abs.toRem(700);
+        }
+    }
+
+    &__pattern {
+        height: fit-content;
+        translate: 0 5px;
+
+        img {
+            width: 100%;
+        }
+    }
 }

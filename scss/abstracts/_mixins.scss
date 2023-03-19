@@ -22,9 +22,13 @@
     justify-content: space-between;
 }
 
-@mixin flex-col-center {
+@mixin flex-col {
     @include flex;
     flex-direction: column;
+}
+
+@mixin flex-col-center {
+    @include flex-col;
     align-items: center;
     justify-content: center;
 }

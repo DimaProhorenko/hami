@@ -3,12 +3,25 @@
 %btn {
     outline: none;
     border: none;
+    text-decoration: none;
+    cursor: pointer;
     background-color: abs.$clr-white;
     color: abs.$clr-primary;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    border-radius: 2em;
     padding: .5em 1em;
+    display: inline-block;
+    min-width: abs.toRem(160);
 }
 
 
 .btn {
     @extend %btn;
+
+    &--primary {
+        background-color: abs.$clr-primary;
+        color: abs.$clr-white;
+    }
 }

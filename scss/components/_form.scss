@@ -1,0 +1,19 @@
+.form {
+
+    &__group {
+
+        &--inline {
+            display: flex;
+        }
+    }
+
+    &__input {
+        outline: none;
+        cursor: pointer;
+        display: inline-block;
+        width: 100%;
+        padding: 1em 1.5em;
+        border: 1px solid #ccc;
+        border-radius: 2em;
+    }
+}

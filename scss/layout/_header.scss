@@ -93,6 +93,10 @@
             column-gap: 1em;
         }
 
+        @include abs.for-desktop-up {
+            column-gap: 2em;
+        }
+
         &-item {
             opacity: 0;
             transform: translateY(-1rem);
@@ -116,11 +120,9 @@
         }
 
         @include abs.for-tablet-up {
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
-        @include abs.for-desktop-up {
-            font-size: 1.4rem;
-        }
+        
     }
 }

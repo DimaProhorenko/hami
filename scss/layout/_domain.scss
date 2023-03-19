@@ -1,0 +1,37 @@
+@use '../abstracts/' as abs;
+
+.domain {
+
+    &__form {
+        margin-block-start: 6em;
+    }
+
+    &__group {
+        box-shadow: -5px 5px 30px rgba(0, 0, 0, .15);
+        border-radius: 2em;
+        width: fit-content;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    &__input {
+        border-color: transparent;
+        border-radius: 0;
+        border-block-start: 2em;
+    }
+
+    &__select {
+        border-color: transparent;
+        border-radius: 0;
+        width: abs.toRem(130);
+    }
+
+    &__submit {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        min-width: unset;
+        width: 30%;
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
+}

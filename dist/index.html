@@ -50,7 +50,7 @@
       </div>
     </header>
 
-    <section class="section hero bg-primary">
+    <section class="hero bg-primary">
       <div class="wrapper hero__container">
         <div class="hero__info flow">
           <h1 class="title">The best web hosting</h1>
@@ -62,12 +62,58 @@
           </p>
           <a href="./contact.html" class="btn">Start now</a>
         </div>
-        <div class="hero__right">
-          <img
-            src="./assets/images/header/stack.webp"
-            alt="tech"
-            class="hero__img"
-          />
+        <img
+          src="./assets/images/hero/hero-stack.webp"
+          alt="tech"
+          class="hero__img"
+        />
+      </div>
+      <div class="hero__pattern">
+        <img src="./assets/images/hero/hero-pattern.png.webp" />
+      </div>
+    </section>
+
+    <section class="section domain">
+      <div class="wrapper domain__container flex">
+        <div class="domain__info">
+          <div class="section__info flow">
+            <h2 class="section__title">Find your perfect domain name</h2>
+            <h6 class="section__lead">Only $7 for the first year</h6>
+          </div>
+        </div>
+        <div class="domain__search">
+          <form class="form domain__form">
+            <div class="form__group form__group--inline domain__group">
+              <label for="domain-search" class="visually-hidden"
+                >Domain name</label
+              >
+              <input
+                type="text"
+                class="form__input domain__input"
+                id="domain-search"
+                placeholder="Your Domain"
+                required
+              />
+              <label for="domain-extantion" class="visually-hidden"
+                >Domain extantion</label
+              >
+              <select
+                name="domain-extantion"
+                id="domain-extantion"
+                class="form__input form__input--select domain__select"
+              >
+                <option value=".COM" selected>.COM</option>
+                <option value=".NET">.NET</option>
+                <option value=".ORG">.ORG</option>
+                <option value=".CO">.CO</option>
+              </select>
+              <input
+                type="submit"
+                class="btn btn--primary domain__submit"
+                value="Search domain"
+              />
+            </div>
+          </form>
         </div>
       </div>
     </section>
