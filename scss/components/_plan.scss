@@ -1,0 +1,67 @@
+@use '../abstracts/' as abs;
+
+.plan {
+    padding: 2em;
+    border-radius: .5em;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .15);
+    text-align: center;
+    flex-grow: 0;
+    min-width: abs.toRem(330);
+
+    &__title {
+        font-size: 1.5rem;
+    }
+
+    &__lead {
+        color: abs.$clr-text-2;
+    }
+
+    &__price {
+        font-size: 4.2rem;
+        font-weight: 500;
+        width: fit-content;
+        margin-inline: auto;
+        margin-block: 1rem 2rem;
+        color: abs.$clr-primary;
+        position: relative;
+
+        &::before {
+            content: "$";
+            font-size: .4em;
+            position: absolute;
+            top: 0;
+            left: -.5em;
+        }
+
+        &::after {
+            content: '/per month';
+            display: block;
+            font-size: .3em;
+            font-weight: 400;
+            color: abs.$clr-text-2;
+        }
+    }
+
+    &__desc-item {
+        margin-block: .5em;
+    }
+
+    &--best {
+        background-color: abs.$clr-blue-gray;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: 'Best Plan';
+            display: inline-block;
+            background-color: abs.$clr-accent;
+            color: abs.$clr-white;
+            padding: .25em 1rem;
+            width: 15rem;
+            position: absolute;
+            top:  1rem;
+            right: -5rem;
+            rotate: 42deg;
+        }
+    }
+}

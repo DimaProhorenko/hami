@@ -31,4 +31,16 @@
         background-color: abs.$clr-primary;
         color: abs.$clr-white;
     }
+
+
+    &--bg {
+        background-color: abs.$clr-primary;
+        color: abs.$clr-white;
+        transition: background-color 300ms ease-in-out, color 300ms ease-in-out, translate 300ms ease-in-out;
+
+        &:hover {
+            background-color: abs.$clr-white;
+            color: abs.$clr-primary;
+        }
+    }
 }

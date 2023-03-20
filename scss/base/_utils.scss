@@ -8,7 +8,11 @@
 }
 
 .section {
-    padding-block: 5em;
+    padding-block-start: 5em;
+
+    &:not(.section--pattern) {
+        padding-block-end: 5em;
+    }
 
     &__info {
         margin-block-end: 2em;
@@ -96,6 +100,10 @@
         flex: 1;
         min-width: abs.toRem(300);
     }
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
 }
 
 .flex-halfs {

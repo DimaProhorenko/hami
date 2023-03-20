@@ -26,6 +26,7 @@
         color: abs.$clr-white;
         @include abs.flex-col-center;
         overflow: hidden;
+        pointer-events: none;
 
         @include abs.for-tablet-up {
             all: unset;
@@ -62,6 +63,7 @@
 
         &--active {
             visibility: visible;
+            pointer-events: all;
 
             &::before {
                 translate: 0;
