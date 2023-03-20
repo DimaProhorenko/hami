@@ -311,6 +311,7 @@ button {
   padding: 1em 1.5em;
   border: 1px solid #ccc;
   border-radius: 2em;
+  appearance: none;
 }
 .form__icon {
   position: absolute;
