@@ -2,7 +2,11 @@
 
 .hero {
     // min-height: 100vh;
-    padding-block-start: 5rem;
+    padding-block-start: 10rem;
+
+    @include abs.for-desktop-up {
+        padding-block-start: 15rem;
+    }
 
     &__container {
         position: relative;

@@ -9,7 +9,8 @@
     }
 
     &__form {
-        margin-block-start: 6em;
+        margin-block-start: 3em;
+        margin-block-end: 2em;
 
         @include abs.for-tablet-up {
             margin-block-start: 0;
@@ -60,5 +61,13 @@
         @include abs.for-desktop-up {
             min-width: abs.toRem(160);
         }
+    }
+
+    &__prices {
+        @include abs.flex;
+        column-gap: 1em;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        color: abs.$clr-text-2;
     }
 }

@@ -1,8 +1,8 @@
 @use './vars';
 
 
-@mixin transition($prop, $duration: 300ms, $timing: linear) {
-    transtion: $prop $duration $timing;
+@mixin transition($prop, $duration: 300ms, $timing: ease-in-out, $delay: 0) {
+    transition: $prop $duration $timing $delay;
 }
 
 

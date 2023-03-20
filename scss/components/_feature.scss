@@ -1,0 +1,28 @@
+@use '../abstracts/' as abs;
+
+.feature {
+    &__area {
+        display: flex;
+        gap: 1em;
+
+        @include abs.for-tablet-up {
+            gap: 2em;
+        }
+    }
+
+    &__icon {
+        font-size: abs.toRem(42);
+        color: abs.$clr-primary;
+    }
+
+    &__title {
+        font-size: abs.toRem(22);
+        font-weight: 500;
+        text-transform: capitalize;
+        margin-bottom: .3em;
+    }
+
+    &__text {
+        color: abs.$clr-text-2; 
+    }
+}
