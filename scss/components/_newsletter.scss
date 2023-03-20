@@ -1,0 +1,9 @@
+@use '../abstracts/' as abs;
+
+.newsletter {
+    @include abs.flex-vals(flex-start, center, column);
+
+    &__form {
+        margin-block-end: 2em;
+    }
+}

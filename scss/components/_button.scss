@@ -24,7 +24,6 @@
     &:hover,
     &:focus {
         box-shadow: 3px 5px 10px rgba(0, 0, 0, .35);
-        translate: 0 -5px;
     }
 
     &--primary {
@@ -41,6 +40,13 @@
         &:hover {
             background-color: abs.$clr-white;
             color: abs.$clr-primary;
+        }
+    }
+
+    &--move-up {
+        transition: box-shadow 300ms ease-in-out, translate 300ms ease-in-out;
+        &:hover {
+            translate: 0 -5px;
         }
     }
 }

@@ -8,10 +8,10 @@
 }
 
 .section {
-    padding-block-start: 5em;
+    padding-block: 5em;
 
-    &:not(.section--pattern) {
-        padding-block-end: 5em;
+    &.section--pattern {
+        padding-block-end: 0;
     }
 
     &__info {
@@ -52,6 +52,17 @@
 
 .text-center {
     text-align: center;
+}
+
+.checkmark {
+    &::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: .8em;
+        display: inline-block;
+        margin-inline-end: .5em;
+        content: "\f00c";
+    }
 }
 
 .visually-hidden {
@@ -114,5 +125,17 @@
         flex-direction: row;
         justify-content: center;
         align-items: stretch;
+
+        & > * {
+            flex-basis: 50%;
+        }
     }
+}
+
+.border-bt {
+    border-block-end: 2px solid abs.$clr-text-2;
+}
+
+.color-accent {
+    color: abs.$clr-primary;
 }

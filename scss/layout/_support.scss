@@ -1,0 +1,23 @@
+@use '../abstracts/' as abs;
+
+.support {
+    padding-block: 10em 2em;
+    display: flex;
+    align-items: flex-end;
+    background: url('../assets/images/support/support-pattern.png.webp') no-repeat top center / cover;
+
+
+    &__title {
+        font-size: 1.25rem;
+        font-size: clamp(1.25rem, 0.8rem + 1.8vw, 2rem);
+        color: abs.$clr-white;
+        max-width: 50rem;
+        margin-inline: auto;
+        text-shadow: 2px 5px 5px rgba(0, 0, 0, .25);
+
+    }
+
+    &__link {
+        color: inherit;
+    }
+}

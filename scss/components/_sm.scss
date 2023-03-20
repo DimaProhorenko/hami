@@ -1,0 +1,44 @@
+@use '../abstracts/' as abs;
+
+.sm {
+    display: flex;
+    column-gap: 2em;
+
+    &__link {
+        display: inline-block;
+        font-size: 1.2rem;
+        width: 2.5rem;
+        line-height: 2.5rem;
+        aspect-ratio: 1;
+        text-align: center;
+        
+        border-radius: 50%;
+        color: abs.$clr-white;
+        @include abs.transition(background-color);
+
+        &:hover,
+        &:focus {
+            background-color: abs.$clr-primary;
+        }
+
+        &--facebook {
+            background-color: abs.$clr-facebook;
+        }
+
+        &--twitter {
+            background-color: abs.$clr-twitter;
+        }
+
+        &--google {
+            background-color: abs.$clr-google;
+        }
+
+        &--instagram {
+            background-color: abs.$clr-instagram;
+        }
+
+        &--youtube {
+            background-color: abs.$clr-youtube;
+        }
+    }
+}

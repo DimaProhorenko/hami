@@ -1,0 +1,16 @@
+.cta {
+    &__thumbnail {
+        margin-block-end: 5em;
+    }
+
+    &__desc {
+        margin-block-end: 2em;
+    }
+
+    &__text {
+        font-size: 1rem;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+
+}
