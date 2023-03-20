@@ -59,3 +59,13 @@
 @mixin for-desktop-up() {
     @media screen and (min-width: vars.$bp-desktop) { @content; }
 }
+
+@mixin animate($animation, $duration: abs.$duration, $method: linear, $times: 1) {
+    animation: $animation $duration $method $times;
+}
+
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+}
