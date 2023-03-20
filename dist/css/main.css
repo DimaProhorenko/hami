@@ -471,8 +471,7 @@ button {
 }
 .header--scrolled {
   padding-block: 1em;
-  background-color: rgba(28, 102, 222, 0.6);
-  backdrop-filter: blur(20px);
+  background-color: rgb(28, 102, 222);
 }
 .header__container {
   display: flex;
@@ -506,7 +505,7 @@ button {
   height: 100%;
   translate: -100%;
   background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   position: absolute;
   top: 0;
   left: 0;

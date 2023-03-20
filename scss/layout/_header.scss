@@ -11,8 +11,7 @@
 
     &--scrolled {
         padding-block: 1em;
-        background-color: rgba(28, 102, 222, .6);
-        backdrop-filter: blur(20px);
+        background-color: rgba(28, 102, 222, 1);
     }
 
     &__container {
@@ -38,7 +37,7 @@
             height: 100%;
             translate: -100%;
             background-color: rgba(255,255,255, .3);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(5px);
             position: absolute;
             top: 0;
             left: 0;
